@@ -121,7 +121,6 @@ void sendWifi(void *parameter) {
         if (interSerial.availableForWrite()) {
             interSerial.write('`');
             interSerial.write((uint8_t*)&wifiProfile, sizeof(wifiProfile));
-            Serial.print('\n');
         }
         if (xSemaphoreTake(wifiBinSem, 0) == pdTRUE) {
             vTaskSuspend(NULL);
