@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MQTT Hub Configuration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MQTT Hub Configuration</h1>
+        
+        <form id="configForm">
+            <h2>Hub Settings</h2>
+            <div class="form-group">
+                <label for="hub_id">Hub ID:</label>
+                <input type="text" id="hub_id" name="hub_id" required>
+            </div>
+            
+            <h2>WiFi Settings</h2>
+            <div class="form-group">
+                <label for="wifi_ssid">WiFi SSID:</label>
+                <input type="text" id="wifi_ssid" name="wifi_ssid" required>
+            </div>
+            <div class="form-group">
+                <label for="wifi_password">WiFi Password:</label>
+                <input type="password" id="wifi_password" name="wifi_password">
+                <small>Leave blank to keep current password</small>
+            </div>
+            
+            <h2>MQTT Settings</h2>
+            <div class="form-group">
+                <label for="mqtt_server">MQTT Server:</label>
+                <input type="text" id="mqtt_server" name="mqtt_server" required>
+            </div>
+            <div class="form-group">
+                <label for="mqtt_port">MQTT Port:</label>
+                <input type="number" id="mqtt_port" name="mqtt_port" required>
+            </div>
+            <div class="form-group">
+                <label for="mqtt_username">MQTT Username:</label>
+                <input type="text" id="mqtt_username" name="mqtt_username">
+            </div>
+            <div class="form-group">
+                <label for="mqtt_password">MQTT Password:</label>
+                <input type="password" id="mqtt_password" name="mqtt_password">
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" class="primary">Save Configuration</button>
+                <button type="button" id="restartBtn" class="secondary">Restart Hub</button>
+            </div>
+        </form>
+        
+        <div id="status"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
